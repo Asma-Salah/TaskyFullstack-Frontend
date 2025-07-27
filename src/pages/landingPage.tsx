@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, Button } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 
 function LandingPage() {
   return (
@@ -35,89 +35,7 @@ function LandingPage() {
           AND always keep your mind clean for future unfiltered thoughts
         </Typography>
       </Stack>
-
-      
     </Box>
   );
 }
 export default LandingPage;
-
-// import { Typography, Button, Grid, Box } from "@mui/material";
-// import { Link as RouterLink } from "react-router-dom";
-// function Hero() {
-//   return (
-//     <>
-//       {/* mmyHero */}
-
-//       <Box
-//         sx={{
-//           minHeight: "100vh",
-//           display: "flex",
-//           justifyContent: "center",
-//           alignItems: "center",
-//           backgroundImage:
-//             "url(https://tse4.mm.bing.net/th/id/OIP.IcEutnCufV-fQ8XqwwDe3gHaEw?pid=Api&P=0&h=220)",
-//           backgroundRepeat: "no-repeat",
-//           backgroundSize: "cover",
-//           backgroundPosition: "center",
-//           px: { xs: 2, md: 10 },
-//           py: { xs: 8, md: 0 },
-//         }}
-//         mb={1}
-//         overflow={"hidden"}
-//       >
-//         <Grid
-//           container
-//           spacing={4}
-//           alignItems={"center"}
-//           justifyContent={"center"}
-//         >
-//           <Grid size={{ xs: 12, md: 6 }}>
-//             <Typography
-//               variant="h3"
-//               component={"h1"}
-//               fontWeight={600}
-//               sx={{ color: "#ffffff", textShadow: "1px 1px 4px #000" }}
-//             >
-//               Cleanse your inner thought a precious diamond inside you with
-//               BlogIt
-//             </Typography>
-//             <Typography
-//               variant="body1"
-//               sx={{
-//                 color: "#e0e0e0",
-//                 maxWidth: 500,
-//                 mb: 2,
-//                 textShadow: "1px, 1px 3px #000",
-//               }}
-//             >
-//               Create and showcase your blog posts here it will definatly be a
-//               skim through in the future
-//             </Typography>
-
-//             <Box sx={{ mt: 4 }}>
-//               <Button
-//                 component={RouterLink}
-//                 to="/register"
-//                 variant="contained"
-//                 size="large"
-//                 sx={{ mr: 2 }}
-//               >
-//                 Get Started
-//               </Button>
-//               <Button
-//                 component={RouterLink}
-//                 to="/login"
-//                 variant="outlined"
-//                 size="large"
-//               >
-//                 LogIn
-//               </Button>
-//             </Box>
-//           </Grid>
-//         </Grid>
-//       </Box>
-//     </>
-//   );
-// }
-// export default Hero;
