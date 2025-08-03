@@ -92,7 +92,7 @@ function Nav() {
             </Stack>
           </Box>
         </Drawer>
-
+        <Toolbar />
         <Outlet />
       </Box>
     );

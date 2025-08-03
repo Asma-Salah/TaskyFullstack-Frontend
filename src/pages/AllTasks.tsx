@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Stack, Toolbar } from "@mui/material";
+import { Box, Grid, Typography, Stack } from "@mui/material";
 import Task from "../components/Task";
 import axiosInstance from "../api/axios";
 import { useQuery } from "@tanstack/react-query";
@@ -36,7 +36,6 @@ function AllTasks() {
   }
   return (
     <Box component={"section"} minHeight={"100vh"}>
-      <Toolbar />
       <Grid container justifyContent={"center"} spacing={4} mt={3} px={5}>
         {data &&
           data.map(

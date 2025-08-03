@@ -6,7 +6,6 @@ import {
   Stack,
   Button,
   Alert,
-  Toolbar,
 } from "@mui/material";
 import axiosInstance from "../api/axios";
 import axios from "axios";
@@ -55,7 +54,6 @@ function NewTask() {
 
   return (
     <Box component={"section"} minHeight={"90vh"}>
-      <Toolbar />
       <Typography variant="h4" textAlign={"center"} fontWeight={"bold"}>
         Create a New Task
       </Typography>

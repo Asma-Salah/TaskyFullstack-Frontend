@@ -1,7 +1,6 @@
 import {
   Box,
   TextField,
-  Toolbar,
   Stack,
   Grid,
   Paper,
@@ -65,7 +64,6 @@ function Profile() {
 
   return (
     <Box component={"section"} minHeight={"80vh"} textAlign={"center"}>
-      <Toolbar />
       <Typography variant="h4">Profile Info</Typography>
       <Grid container justifyContent={"center"} spacing={2}>
         <Grid size={{ xs: 12, md: 3 }}>
