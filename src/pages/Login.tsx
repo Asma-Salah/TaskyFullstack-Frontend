@@ -57,8 +57,16 @@ function Login() {
 
   return (
     <Box textAlign={"center"}>
-      <Typography variant="h6">Have an Account? login here</Typography>
-      <Grid container justifyContent={"center"}>
+      <Grid
+        container
+        justifyContent={"center"}
+        height={"83vh"}
+        alignItems={"center"}
+        direction={"column"}
+      >
+        <Typography variant="h6" textAlign={"center"}>
+          Have an Account? login here
+        </Typography>
         <Grid size={{ xs: 12, md: 6 }}>
           <Paper>
             <Stack spacing={2} padding={4} mb={2}>

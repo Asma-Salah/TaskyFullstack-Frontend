@@ -76,9 +76,9 @@ function Register() {
         transform with tasky
       </Typography>
       <Grid container justifyContent={"center"}>
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid size={{ xs: 12, md: 6 }} mb={2}>
           <Paper component={"form"} sx={{ p: 2 }} elevation={24}>
-            <Stack spacing={2} p={4} bgcolor={"lightpink"} borderRadius={6}>
+            <Stack spacing={2} p={2} borderRadius={6}>
               {formError && <Alert severity="error">{formError}</Alert>}
               <TextField
                 label="FirstName"

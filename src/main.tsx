@@ -5,16 +5,20 @@ import "./index.css";
 // import Test from "./Test.tsx";
 import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "@emotion/react";
+import theme from "./Theme/theme.ts";
 
 const client = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QueryClientProvider client={client}>
-      <BrowserRouter>
-        {/* <Test /> */}
-        <App />
-      </BrowserRouter>
-    </QueryClientProvider>
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={client}>
+        <BrowserRouter>
+          {/* <Test /> */}
+          <App />
+        </BrowserRouter>
+      </QueryClientProvider>
+    </ThemeProvider>
   </StrictMode>
 );

@@ -7,15 +7,23 @@ interface User {
   lastName: string;
   email: string;
   username: string;
+  avatar: string;
 }
 interface userStore {
-  user: User | null;
+  user: User;
   setUser: (user: User) => void;
   logoutUser: () => void;
 }
+const emptyUserStore = {
+  firstName: "",
+  lastName: "",
+  username: "",
+  email: "",
+  avatar: "",
+};
 const userStore: StateCreator<userStore> = (set) => {
   return {
-    user: null,
+    user: emptyUserStore,
     setUser: (user: User) => {
       set(function () {
         return { user };
@@ -23,7 +31,7 @@ const userStore: StateCreator<userStore> = (set) => {
     },
     logoutUser: () => {
       set(function () {
-        return { user: null };
+        return { user: emptyUserStore };
       });
     },
   };

@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import NavBar from "./components/navBar";
 import Home from "./pages/homePage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -11,57 +10,75 @@ import Trash from "./pages/Trash";
 import Profile from "./pages/Profile";
 import Footer from "./components/footer";
 import Protected from "./components/protected";
+import { Toaster } from "react-hot-toast";
 
+import Nav from "./components/taskHEADER";
+import NavBar from "./components/navBar";
+import UpdateTask from "./pages/UpdateTask";
 function App() {
   return (
     <>
-      <NavBar />
+      {/* <Nav /> */}
+      <Toaster />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<NavBar />}>
+          <Route index element={<Home />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+        <Route path="/tasks" element={<Nav />}>
+          <Route
+            index
+            element={
+              <Protected>
+                <AllTasks />
+              </Protected>
+            }
+          />
+          <Route
+            path="new"
+            element={
+              <Protected>
+                <NewTask />
+              </Protected>
+            }
+          />
+          <Route
+            path="complete"
+            element={
+              <Protected>
+                <CompletedTasks />
+              </Protected>
+            }
+          />
 
-        <Route
-          path="/tasks"
-          element={
-            <Protected>
-              <AllTasks />
-            </Protected>
-          }
-        />
-        <Route
-          path="/tasks/new"
-          element={
-            <Protected>
-              <NewTask />
-            </Protected>
-          }
-        />
-        <Route
-          path="/tasks/complete"
-          element={
-            <Protected>
-              <CompletedTasks />
-            </Protected>
-          }
-        />
+          <Route
+            path="trash"
+            element={
+              <Protected>
+                <Trash />
+              </Protected>
+            }
+          />
 
-        <Route
-          path="/tasks/trash"
-          element={
-            <Protected>
-              <Trash />
-            </Protected>
-          }
-        />
-        <Route
-          path="/profile"
-          element={
-            <Protected>
-              <Profile />
-            </Protected>
-          }
-        />
+          <Route
+            path="profile"
+            element={
+              <Protected>
+                <Profile />
+              </Protected>
+            }
+          />
+
+          <Route
+            path="update/:id"
+            element={
+              <Protected>
+                <UpdateTask />
+              </Protected>
+            }
+          />
+        </Route>
       </Routes>
       <Footer />
     </>
